@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 
@@ -14,8 +16,8 @@
     Day Rate: <input type="text" ng-model="rateDay"><br>
     Days worked<input type="text" ng-model="workedDays"><br>
     <br>
-    Full Name: {{fullName()}}<br/>
-    <p>Total Earned: <span ng-bind="rateDay * workedDays"></span></p>
+    Full Name: {{fullName() | uppercase}}<br/>
+    <p>Total Earned: <span ng-bind="rateDay * workedDays | currency:'£'"></span></p>
     <p>Age: <span ng-bind="person.age"></span></p>
     <p>Pets: <span ng-bind="person.petNames"></span></p>
     <p>FirstPet: <span ng-bind="person.petNames[0]"></span></p>
@@ -33,7 +35,7 @@
     </ul>
 </div>
 
-<script src="personController.js"></script>
+    <script src="personController.js"></script>
 
 </body>
 </html>
