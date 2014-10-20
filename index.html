@@ -14,7 +14,7 @@
     Day Rate: <input type="text" ng-model="rateDay"><br>
     Days worked<input type="text" ng-model="workedDays"><br>
     <br>
-    Full Name: {{firstName + " " + lastName}}<br/>
+    Full Name: {{fullName()}}<br/>
     <p>Total Earned: <span ng-bind="rateDay * workedDays"></span></p>
     <p>Age: <span ng-bind="person.age"></span></p>
     <p>Pets: <span ng-bind="person.petNames"></span></p>
@@ -31,38 +31,9 @@
         {{ x.type }}, {{ x.engineSizeCC }}CC
       </li>
     </ul>
-
-
-
-
 </div>
 
-<script>
-function personController($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-    $scope.rateDay = 350;
-    $scope.workedDays = 5;
-
-    $scope.person = {
-        age: 30,
-        petNames: ["moo", "oz"],
-        cars: [
-            {
-                type: "mini",
-                engineSizeCC: "1000",
-                hasTurbo: false
-            },
-            {
-                type: "citroen",
-                engineSizeCC: "2000",
-                hasTurbo: true
-            }
-        ]
-    };
-    console.log('$scope', $scope);
-}
-</script>
+<script src="personController.js"></script>
 
 </body>
 </html>
