@@ -16,6 +16,9 @@
     <br>
     Full Name: {{firstName + " " + lastName}}<br/>
     <p>Total Earned: <span ng-bind="rateDay * workedDays"></span></p>
+    <p>Age: <span ng-bind="person.age"></span></p>
+    <p>Pets: <span ng-bind="person.petNames"></span></p>
+    <p>FirstPet: <span ng-bind="person.petNames[0]"></span></p>
 
 
 </div>
@@ -26,6 +29,13 @@ function personController($scope) {
     $scope.lastName = "Doe";
     $scope.rateDay = 350;
     $scope.workedDays = 5;
+
+    $scope.person = {
+        age: 30,
+        petNames: ["moo", "oz"]
+    };
+
+
 }
 </script>
 
