@@ -11,8 +11,11 @@
 
     First Name: <input type="text" ng-model="firstName"><br>
     Last Name: <input type="text" ng-model="lastName"><br>
+    Day Rate: <input type="text" ng-model="rateDay"><br>
+    Days worked<input type="text" ng-model="workedDays"><br>
     <br>
-    Full Name: {{firstName + " " + lastName}}
+    Full Name: {{firstName + " " + lastName}}<br/>
+    Total earned: {{rateDay * workedDays}}
 
 </div>
 
@@ -20,6 +23,8 @@
 function personController($scope) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
+    $scope.rateDay = 350;
+    $scope.workedDays = 0;
 }
 </script>
 
