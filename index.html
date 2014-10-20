@@ -15,7 +15,8 @@
     Days worked<input type="text" ng-model="workedDays"><br>
     <br>
     Full Name: {{firstName + " " + lastName}}<br/>
-    Total earned: {{rateDay * workedDays}}
+    <p>Total Earned: <span ng-bind="rateDay * workedDays"></span></p>
+
 
 </div>
 
@@ -24,7 +25,7 @@ function personController($scope) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
     $scope.rateDay = 350;
-    $scope.workedDays = 0;
+    $scope.workedDays = 5;
 }
 </script>
 
