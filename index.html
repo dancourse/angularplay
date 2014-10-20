@@ -29,7 +29,7 @@
     </ul>
 
     <ul>
-      <li ng-repeat="x in person.cars">
+      <li ng-repeat="x in person.cars | orderBy:'-engineSizeCC'">
         {{ x.type }}, {{ x.engineSizeCC }}CC
       </li>
     </ul>
